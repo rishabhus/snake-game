@@ -1,0 +1,126 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(270deg, #1e3c72, #2a5298, #1e3c72, #2a5298);
+    background-size: 400% 400%;
+    animation: gradientBG 10s ease infinite;
+    color: #fff;
+    font-family: 'Segoe UI', 'Arial', sans-serif;
+}
+
+@keyframes gradientBG {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+#game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(30, 30, 40, 0.95);
+    padding: 32px 32px 24px 32px;
+    border-radius: 24px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+    margin-top: 24px;
+}
+
+#gameCanvas {
+    background: #181818;
+    border: 3px solid #fff;
+    border-radius: 18px;
+    margin-bottom: 16px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+    transition: box-shadow 0.2s;
+}
+
+#gameCanvas:focus {
+    box-shadow: 0 0 0 4px #2a5298;
+}
+
+#score {
+    font-size: 1.4em;
+    margin-top: 8px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 8px #000a;
+}
+
+h1 {
+    font-family: 'Segoe UI', 'Arial', sans-serif;
+    font-size: 2.2em;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 0.5em;
+    text-shadow: 0 4px 16px #000a;
+}
+
+#highscore {
+    font-size: 1.1em;
+    margin-top: 4px;
+    color: #ffd700;
+    font-weight: 500;
+    text-shadow: 0 1px 4px #000a;
+}
+
+#gameover-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(30, 30, 40, 0.97);
+    z-index: 100;
+    border-radius: 0 0 24px 24px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+    color: #fff;
+    font-family: 'Segoe UI', 'Arial', sans-serif;
+}
+
+#gameover-screen h2 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+    color: #ff4c4c;
+    text-shadow: 0 2px 12px #000a;
+}
+
+#final-score {
+    font-size: 1.3em;
+    margin-bottom: 1.2em;
+    color: #ffd700;
+    font-weight: 600;
+}
+
+#restart-btn {
+    padding: 0.7em 2.2em;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(90deg, #1e3c72, #2a5298);
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 2px 8px #0005;
+    transition: background 0.2s, transform 0.1s;
+}
+#restart-btn:hover {
+    background: linear-gradient(90deg, #2a5298, #1e3c72);
+    transform: scale(1.05);
+}
+
+#music-controls {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 0.7em;
+    font-size: 1em;
+    color: #fff;
+}
+#music-volume {
+    width: 120px;
+    accent-color: #2a5298;
+} 
